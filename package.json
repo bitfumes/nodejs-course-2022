@@ -4,7 +4,7 @@
   "description": "This is Nodejs course",
   "main": "app.js",
   "scripts": {
-    "dev": "node app.js"
+    "dev": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/bitfumes/nodejs-course-2022/issues"
   },
-  "homepage": "https://github.com/bitfumes/nodejs-course-2022#readme"
+  "homepage": "https://github.com/bitfumes/nodejs-course-2022#readme",
+  "dependencies": {
+    "nodemon": "^2.0.19"
+  }
 }
