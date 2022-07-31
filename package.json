@@ -1,0 +1,20 @@
+{
+  "name": "my-app",
+  "version": "1.0.0",
+  "description": "This is Nodejs course",
+  "main": "app.js",
+  "scripts": {
+    "dev": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bitfumes/nodejs-course-2022.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bitfumes/nodejs-course-2022/issues"
+  },
+  "homepage": "https://github.com/bitfumes/nodejs-course-2022#readme"
+}
