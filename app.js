@@ -1,6 +1,25 @@
 const http = require("http");
 const fs = require("fs");
 
+const func1 = () => console.log("func1");
+const func2 = () => console.log("func2");
+const func3 = () => {
+  console.log("func3");
+
+  new Promise((resolve, reject) => {
+    resolve("I am a promise");
+  }).then((res) => console.log(res));
+
+  setTimeout(func1, 0);
+  func2();
+}; // <---
+func3();
+
+// func3
+// I am a promise
+// func2
+// func1
+
 const PORT = 3000;
 
 const server = http.createServer((req, res) => {
@@ -41,3 +60,5 @@ const server = http.createServer((req, res) => {
 
 console.log(`server is running at http://localhost:${PORT}`);
 server.listen(PORT);
+
+// settimeout
