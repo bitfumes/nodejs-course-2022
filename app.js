@@ -1,28 +1,6 @@
 const http = require("http");
 const fs = require("fs");
 
-const func1 = () => console.log("func1");
-const func2 = () => console.log("func2");
-const func3 = () => {
-  console.log("func3");
-
-  process.nextTick(() => {
-    console.log("I am next tickkkkkk");
-  });
-
-  new Promise((resolve, reject) => {
-    resolve("I am a promise");
-  }).then((res) => console.log(res));
-
-  setTimeout(func1, 0);
-  func2();
-}; // <---
-func3();
-
-// mini tasks ->  nextTick
-// micro task -> promises
-// macro task -> settimeout, setinterval
-
 const PORT = 3000;
 
 const server = http.createServer((req, res) => {
