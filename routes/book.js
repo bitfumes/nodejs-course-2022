@@ -11,12 +11,8 @@ bookRouter
   })
   .post(async (req, res) => {
     const db = await connect();
-    const data = {
-      title: "Power of consistency",
-      author: "unknown",
-    };
 
-    await db.collection("book").insertOne(data);
+    await db.collection("book").insertOne(req.body);
     res.json({ data: "Book is stored" });
   });
 
