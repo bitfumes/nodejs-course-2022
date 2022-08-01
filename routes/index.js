@@ -4,7 +4,7 @@ const bookRouter = require("./book");
 const path = require("path");
 
 router.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "/../page/home.html"), { name: "sarthak" });
+  res.render("index", { name: "sarthak" });
 });
 
 router.use("/book", bookRouter);
