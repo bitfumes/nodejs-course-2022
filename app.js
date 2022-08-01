@@ -6,6 +6,10 @@ const func2 = () => console.log("func2");
 const func3 = () => {
   console.log("func3");
 
+  process.nextTick(() => {
+    console.log("I am next tickkkkkk");
+  });
+
   new Promise((resolve, reject) => {
     resolve("I am a promise");
   }).then((res) => console.log(res));
@@ -15,10 +19,9 @@ const func3 = () => {
 }; // <---
 func3();
 
-// func3
-// I am a promise
-// func2
-// func1
+// mini tasks ->  nextTick
+// micro task -> promises
+// macro task -> settimeout, setinterval
 
 const PORT = 3000;
 
